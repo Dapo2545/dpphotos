@@ -2,26 +2,29 @@ const CONTACT_EMAIL = 'praiseadebayo684@gmail.com';
 const WHATSAPP_NUMBER = '2349112560364';
 
 const photos = [
-  { id: '1511285560929-80b456fea0bc', cat: 'weddings', title: 'The Celebration' },
-  { id: '1507003211169-0a1dd7228f2d', cat: 'portraits', title: 'Daniel' },
-  { id: '1470225620780-dba8ba36b745', cat: 'events', title: 'Afterparty' },
-  { id: '1606216794074-735e91aa2c92', cat: 'weddings', title: 'Under the Palms' },
-  { id: '1494790108377-be9c29b29330', cat: 'portraits', title: 'Ada' },
-  { id: '1505236858219-8359eb29e329', cat: 'events', title: 'Encore' },
-  { id: '1515934751635-c81c6bc9a2d8', cat: 'weddings', title: 'The Rings' },
-  { id: '1438761681033-6461ffad8d80', cat: 'portraits', title: 'Grace' },
-  { id: '1464822759023-fed622ff2c3b', cat: 'landscapes', title: 'Summit' },
-  { id: '1529636798458-92182e662485', cat: 'weddings', title: 'The Arch' },
-  { id: '1583939003579-730e3918a45a', cat: 'weddings', title: 'Just Married' },
-  { id: '1500648767791-00dcc994a43e', cat: 'portraits', title: 'Michael' },
-  { id: '1501854140801-50d01698950b', cat: 'landscapes', title: 'Green Hills' },
-  { id: '1540575467063-178a50c2df87', cat: 'events', title: 'The Keynote' },
-  { id: '1534528741775-53994a69daeb', cat: 'portraits', title: 'Blue Hour' },
-  { id: '1520854221256-17451cc331bf', cat: 'weddings', title: 'Hand in Hand' },
-  { id: '1506905925346-21bda4d32df4', cat: 'landscapes', title: 'Above the Clouds' },
+  { file: 'studio-1', cat: 'studio', title: 'In Session' },
+  { file: 'portrait-field-colour', cat: 'portraits', title: 'Terracotta' },
+  { file: 'event-velvet', cat: 'events', title: 'Convocation Glow' },
+  { file: 'portrait-field-bw', cat: 'portraits', title: 'Breeze' },
+  { file: 'studio-2', cat: 'studio', title: 'Deadline' },
+  { file: 'event-laugh-bw', cat: 'events', title: 'Pure Joy' },
+  { file: 'nature-lily', cat: 'nature', title: 'Still Water' },
+  { file: 'portrait-rail', cat: 'portraits', title: 'Pause' },
+  { file: 'event-graduate', cat: 'events', title: 'The Graduate' },
+  { file: 'portrait-scarf-bw', cat: 'portraits', title: 'Quiet Light' },
+  { file: 'event-hat', cat: 'events', title: 'Sunday Best' },
+  { file: 'event-conversation', cat: 'events', title: 'Words of Advice' },
+  { file: 'portrait-rail-2', cat: 'portraits', title: 'Look Up' },
+  { file: 'event-watch-bw', cat: 'events', title: 'On Time' },
+  { file: 'portrait-field-bw-2', cat: 'portraits', title: 'Ease' },
+  { file: 'nature-palm', cat: 'nature', title: 'Canopy' },
+  { file: 'event-mic', cat: 'events', title: 'The Address' },
+  { file: 'portrait-shades-bw', cat: 'portraits', title: 'Shades' },
+  { file: 'event-shades-bw', cat: 'events', title: 'Crown' },
+  { file: 'event-speaker', cat: 'events', title: 'The Speaker' },
 ];
-const labels = { weddings: 'Weddings', portraits: 'Portraits', events: 'Events', landscapes: 'Travel' };
-const src = (id, w) => `https://images.unsplash.com/photo-${id}?w=${w}&q=80`;
+const labels = { portraits: 'Portraits', events: 'Events', studio: 'Studio', nature: 'Nature' };
+const src = p => `images/work/${p.file}.jpg`;
 
 /* Hero slideshow */
 const slides = [...document.querySelectorAll('.slide')];
@@ -51,7 +54,7 @@ function render(filter) {
   visible = filter === 'all' ? photos : photos.filter(p => p.cat === filter);
   gallery.innerHTML = visible.map((p, i) => `
     <figure data-index="${i}" style="animation-delay:${Math.min(i, 8) * 70}ms">
-      <img src="${src(p.id, 900)}" alt="${p.title} — ${labels[p.cat]}" loading="lazy">
+      <img src="${src(p)}" alt="${p.title} — ${labels[p.cat]}" loading="lazy">
       <figcaption>${p.title} &middot; ${labels[p.cat]}</figcaption>
     </figure>`).join('');
   filterBtns.forEach(b => b.classList.toggle('active', b.dataset.filter === filter));
@@ -72,7 +75,7 @@ let cur = 0;
 function openLb(i) {
   cur = (i + visible.length) % visible.length;
   const p = visible[cur];
-  lbImg.src = src(p.id, 2000);
+  lbImg.src = src(p);
   lbImg.alt = p.title;
   lbCap.textContent = `${p.title} — ${labels[p.cat]}  ·  ${cur + 1} / ${visible.length}`;
   lb.classList.add('open');

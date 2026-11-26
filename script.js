@@ -2,26 +2,26 @@ const CONTACT_EMAIL = 'praiseadebayo684@gmail.com';
 const WHATSAPP_NUMBER = '2349112560364';
 
 const photos = [
-  { file: 'studio-1', cat: 'studio', title: 'In Session' },
+  { file: 'studio-2', cat: 'studio', title: 'Deadline', wide: true },
   { file: 'portrait-field-colour', cat: 'portraits', title: 'Terracotta' },
   { file: 'event-velvet', cat: 'events', title: 'Convocation Glow' },
-  { file: 'portrait-field-bw', cat: 'portraits', title: 'Breeze' },
-  { file: 'studio-2', cat: 'studio', title: 'Deadline' },
-  { file: 'event-laugh-bw', cat: 'events', title: 'Pure Joy' },
-  { file: 'nature-lily', cat: 'nature', title: 'Still Water' },
-  { file: 'portrait-rail', cat: 'portraits', title: 'Pause' },
-  { file: 'event-graduate', cat: 'events', title: 'The Graduate' },
   { file: 'portrait-scarf-bw', cat: 'portraits', title: 'Quiet Light' },
+  { file: 'event-graduate', cat: 'events', title: 'The Graduate' },
+  { file: 'portrait-field-bw', cat: 'portraits', title: 'Breeze' },
+  { file: 'event-conversation', cat: 'events', title: 'Words of Advice', wide: true },
+  { file: 'studio-1', cat: 'studio', title: 'In Session' },
+  { file: 'event-laugh-bw', cat: 'events', title: 'Pure Joy' },
   { file: 'event-hat', cat: 'events', title: 'Sunday Best' },
-  { file: 'event-conversation', cat: 'events', title: 'Words of Advice' },
-  { file: 'portrait-rail-2', cat: 'portraits', title: 'Look Up' },
-  { file: 'event-watch-bw', cat: 'events', title: 'On Time' },
+  { file: 'event-mic', cat: 'events', title: 'The Address', wide: true },
   { file: 'portrait-field-bw-2', cat: 'portraits', title: 'Ease' },
-  { file: 'nature-palm', cat: 'nature', title: 'Canopy' },
-  { file: 'event-mic', cat: 'events', title: 'The Address' },
-  { file: 'portrait-shades-bw', cat: 'portraits', title: 'Shades' },
+  { file: 'portrait-rail', cat: 'portraits', title: 'Pause' },
   { file: 'event-shades-bw', cat: 'events', title: 'Crown' },
-  { file: 'event-speaker', cat: 'events', title: 'The Speaker' },
+  { file: 'nature-lily', cat: 'nature', title: 'Still Water' },
+  { file: 'event-watch-bw', cat: 'events', title: 'On Time' },
+  { file: 'event-speaker', cat: 'events', title: 'The Speaker', wide: true },
+  { file: 'portrait-rail-2', cat: 'portraits', title: 'Look Up' },
+  { file: 'portrait-shades-bw', cat: 'portraits', title: 'Shades' },
+  { file: 'nature-palm', cat: 'nature', title: 'Canopy' },
 ];
 const labels = { portraits: 'Portraits', events: 'Events', studio: 'Studio', nature: 'Nature' };
 const src = p => `images/work/${p.file}.jpg`;
@@ -53,7 +53,7 @@ let visible = photos;
 function render(filter) {
   visible = filter === 'all' ? photos : photos.filter(p => p.cat === filter);
   gallery.innerHTML = visible.map((p, i) => `
-    <figure data-index="${i}" style="animation-delay:${Math.min(i, 8) * 70}ms">
+    <figure data-index="${i}"${p.wide ? ' class="wide"' : ''} style="animation-delay:${Math.min(i, 8) * 70}ms">
       <img src="${src(p)}" alt="${p.title} — ${labels[p.cat]}" loading="lazy">
       <figcaption>${p.title} &middot; ${labels[p.cat]}</figcaption>
     </figure>`).join('');

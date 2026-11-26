@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Praise Adebayo Photography</title>
+<meta name="description" content="Wedding, portrait, event and landscape photography by Praise Adebayo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#home" class="logo">PRAISE<span>ADEBAYO</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+  <nav class="nav-links" id="navLinks">
+    <a href="#gallery">Portfolio</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact" class="btn btn-small">Book a Shoot</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="eyebrow">Photography &middot; Lagos &amp; Worldwide</p>
+    <h1>Moments worth<br><em>keeping forever.</em></h1>
+    <p class="hero-sub">Weddings, portraits, events and the places in between.</p>
+    <div class="hero-actions">
+      <a href="#gallery" class="btn">View Portfolio</a>
+      <a href="#contact" class="btn btn-outline">Book a Shoot</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="section-head">
+    <p class="eyebrow">Portfolio</p>
+    <h2>Selected Work</h2>
+  </div>
+  <div class="filters" id="filters">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="weddings">Weddings</button>
+    <button class="filter" data-filter="portraits">Portraits</button>
+    <button class="filter" data-filter="events">Events</button>
+    <button class="filter" data-filter="landscapes">Landscapes</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="section about" id="about">
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=900&q=80" alt="Camera and lenses" loading="lazy">
+  </div>
+  <div class="about-text">
+    <p class="eyebrow">About Me</p>
+    <h2>Hi, I'm Praise.</h2>
+    <p>I'm a photographer who loves real moments: the nervous laugh before the vows, the quiet look between friends, the light just before sunset. My job is to make you feel comfortable so the photos feel like you.</p>
+    <p>Based in Lagos and available to travel. Every shoot comes with a fully edited, high-resolution online gallery.</p>
+    <div class="stats">
+      <div><strong>200+</strong><span>Shoots</span></div>
+      <div><strong>5</strong><span>Years</span></div>
+      <div><strong>100%</strong><span>Passion</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-head">
+    <p class="eyebrow">Services</p>
+    <h2>Packages</h2>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h3>Portrait Session</h3>
+      <p class="price">From &#8358;50,000</p>
+      <ul>
+        <li>1 hour shoot</li>
+        <li>1 location</li>
+        <li>20 edited photos</li>
+        <li>Online gallery</li>
+      </ul>
+      <a href="#contact" class="btn btn-outline" data-package="Portrait Session">Book</a>
+    </div>
+    <div class="card featured">
+      <span class="badge">Most Popular</span>
+      <h3>Wedding Coverage</h3>
+      <p class="price">From &#8358;350,000</p>
+      <ul>
+        <li>Full day coverage</li>
+        <li>Second shooter</li>
+        <li>400+ edited photos</li>
+        <li>Pre-wedding shoot</li>
+      </ul>
+      <a href="#contact" class="btn" data-package="Wedding Coverage">Book</a>
+    </div>
+    <div class="card">
+      <h3>Events</h3>
+      <p class="price">From &#8358;120,000</p>
+      <ul>
+        <li>Up to 4 hours</li>
+        <li>Birthdays, launches, parties</li>
+        <li>100+ edited photos</li>
+        <li>48-hour sneak peek</li>
+      </ul>
+      <a href="#contact" class="btn btn-outline" data-package="Events">Book</a>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="section-head">
+    <p class="eyebrow">Contact</p>
+    <h2>Let's create something beautiful</h2>
+    <p class="muted">Tell me about your shoot and I'll get back to you within 24 hours.</p>
+  </div>
+  <form class="form" id="contactForm">
+    <div class="row">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+    </div>
+    <div class="row">
+      <select name="package" id="packageSelect">
+        <option>Portrait Session</option>
+        <option>Wedding Coverage</option>
+        <option>Events</option>
+        <option>Something else</option>
+      </select>
+      <input type="date" name="date">
+    </div>
+    <textarea name="message" rows="5" placeholder="Tell me about your shoot..." required></textarea>
+    <div class="form-actions">
+      <button type="submit" class="btn">Send via Email</button>
+      <button type="button" class="btn btn-outline" id="waBtn">Send via WhatsApp</button>
+    </div>
+  </form>
+  <div class="socials">
+    <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+    <a href="mailto:praiseadebayo684@gmail.com">praiseadebayo684@gmail.com</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Praise Adebayo Photography. All rights reserved.</p>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+  <img id="lbImg" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">&#8250;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

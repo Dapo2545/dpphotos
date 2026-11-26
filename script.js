@@ -1,5 +1,5 @@
 const CONTACT_EMAIL = 'praiseadebayo684@gmail.com';
-const WHATSAPP_NUMBER = '2340000000000';
+const WHATSAPP_NUMBER = '2349112560364';
 
 const photos = [
   { id: '1511285560929-80b456fea0bc', cat: 'weddings', title: 'The Celebration' },
@@ -157,7 +157,7 @@ function validate() {
 }
 function message() {
   const d = new FormData(form);
-  return `Hello Praise,\n\nName: ${d.get('name')}\nEmail: ${d.get('email')}\nService: ${d.get('package')}\nDate: ${d.get('date') || 'To be confirmed'}\n\n${d.get('message')}`;
+  return `Hello Dpvibes Photography,\n\nName: ${d.get('name')}\nEmail: ${d.get('email')}\nService: ${d.get('package')}\nDate: ${d.get('date') || 'To be confirmed'}\n\n${d.get('message')}`;
 }
 form.addEventListener('submit', e => {
   e.preventDefault();

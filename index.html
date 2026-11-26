@@ -3,155 +3,252 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Praise Adebayo Photography</title>
-<meta name="description" content="Wedding, portrait, event and landscape photography by Praise Adebayo.">
+<title>Praise Adebayo — Photography</title>
+<meta name="description" content="Praise Adebayo is a Lagos-based wedding, portrait and event photographer creating timeless, editorial imagery.">
+<meta property="og:title" content="Praise Adebayo — Photography">
+<meta property="og:description" content="Timeless wedding, portrait and event photography. Lagos & worldwide.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1200&q=80">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='Georgia'>P</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="nav" id="nav">
-  <a href="#home" class="logo">PRAISE<span>ADEBAYO</span></a>
-  <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
-  <nav class="nav-links" id="navLinks">
-    <a href="#gallery">Portfolio</a>
+  <nav class="nav-side nav-left">
+    <a href="#work">Work</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#contact" class="btn btn-small">Book a Shoot</a>
   </nav>
+  <a href="#top" class="brand">
+    <span class="brand-name">Praise Adebayo</span>
+    <span class="brand-sub">Photography</span>
+  </a>
+  <nav class="nav-side nav-right">
+    <a href="#journal">Kind Words</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="nav-cta">Inquire</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
 </header>
 
-<section class="hero" id="home">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="eyebrow">Photography &middot; Lagos &amp; Worldwide</p>
-    <h1>Moments worth<br><em>keeping forever.</em></h1>
-    <p class="hero-sub">Weddings, portraits, events and the places in between.</p>
-    <div class="hero-actions">
-      <a href="#gallery" class="btn">View Portfolio</a>
-      <a href="#contact" class="btn btn-outline">Book a Shoot</a>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#work">Work</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#journal">Kind Words</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Inquire</a>
+</div>
+
+<section class="hero" id="top">
+  <div class="hero-slides" id="heroSlides">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=2000&q=80')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=2000&q=80')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=2000&q=80')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=2000&q=80')"></div>
+  </div>
+  <div class="hero-shade"></div>
+  <div class="hero-inner">
+    <p class="kicker light">Wedding &middot; Portrait &middot; Editorial</p>
+    <h1>Honest images,<br><em>beautifully told.</em></h1>
+    <a href="#work" class="link-arrow light">Explore the portfolio <span>&rarr;</span></a>
+  </div>
+  <div class="hero-meta">
+    <span id="slideNum">01</span><span class="bar"><i id="slideBar"></i></span><span>04</span>
+  </div>
+  <a href="#intro" class="scroll-cue" aria-label="Scroll down">Scroll</a>
+</section>
+
+<section class="intro reveal" id="intro">
+  <p class="kicker">Lagos &mdash; Available Worldwide</p>
+  <p class="statement">I photograph people and the moments between moments &mdash; with a quiet, documentary approach and a refined, editorial eye. The result is imagery that feels <em>natural, elegant and entirely yours.</em></p>
+</section>
+
+<section class="collections">
+  <a href="#work" class="collection reveal" data-goto="weddings">
+    <div class="c-img"><img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=1000&q=80" alt="Wedding photography" loading="lazy"></div>
+    <div class="c-text"><span>01</span><h3>Weddings</h3></div>
+  </a>
+  <a href="#work" class="collection reveal" data-goto="portraits">
+    <div class="c-img"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1000&q=80" alt="Portrait photography" loading="lazy"></div>
+    <div class="c-text"><span>02</span><h3>Portraits</h3></div>
+  </a>
+  <a href="#work" class="collection reveal" data-goto="events">
+    <div class="c-img"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1000&q=80" alt="Event photography" loading="lazy"></div>
+    <div class="c-text"><span>03</span><h3>Events</h3></div>
+  </a>
+</section>
+
+<section class="section" id="work">
+  <div class="section-head reveal">
+    <div>
+      <p class="kicker">Portfolio</p>
+      <h2>Selected work</h2>
     </div>
+    <div class="filters" id="filters">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="weddings">Weddings</button>
+      <button data-filter="portraits">Portraits</button>
+      <button data-filter="events">Events</button>
+      <button data-filter="landscapes">Travel</button>
+    </div>
+  </div>
+  <div class="gallery" id="gallery"></div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-img reveal">
+    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1100&q=80" alt="Praise Adebayo's camera" loading="lazy">
+  </div>
+  <div class="about-text reveal">
+    <p class="kicker">About</p>
+    <h2>Hello, I'm Praise.</h2>
+    <p>For over five years I've had the privilege of documenting weddings, families, brands and celebrations across Nigeria and abroad. My work is guided by one belief: the best photographs happen when people feel at ease.</p>
+    <p>I keep my process calm and personal. I'll learn your story, plan every detail with you, and then step back so your day can unfold naturally &mdash; while I make sure nothing is missed.</p>
+    <div class="facts">
+      <div><strong>200+</strong><span>Sessions</span></div>
+      <div><strong>5 yrs</strong><span>Experience</span></div>
+      <div><strong>4 wks</strong><span>Delivery</span></div>
+    </div>
+    <p class="signature">Praise Adebayo</p>
   </div>
 </section>
 
-<section class="section" id="gallery">
-  <div class="section-head">
-    <p class="eyebrow">Portfolio</p>
-    <h2>Selected Work</h2>
-  </div>
-  <div class="filters" id="filters">
-    <button class="filter active" data-filter="all">All</button>
-    <button class="filter" data-filter="weddings">Weddings</button>
-    <button class="filter" data-filter="portraits">Portraits</button>
-    <button class="filter" data-filter="events">Events</button>
-    <button class="filter" data-filter="landscapes">Landscapes</button>
-  </div>
-  <div class="grid" id="grid"></div>
-</section>
-
-<section class="section about" id="about">
-  <div class="about-img">
-    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=900&q=80" alt="Camera and lenses" loading="lazy">
-  </div>
-  <div class="about-text">
-    <p class="eyebrow">About Me</p>
-    <h2>Hi, I'm Praise.</h2>
-    <p>I'm a photographer who loves real moments: the nervous laugh before the vows, the quiet look between friends, the light just before sunset. My job is to make you feel comfortable so the photos feel like you.</p>
-    <p>Based in Lagos and available to travel. Every shoot comes with a fully edited, high-resolution online gallery.</p>
-    <div class="stats">
-      <div><strong>200+</strong><span>Shoots</span></div>
-      <div><strong>5</strong><span>Years</span></div>
-      <div><strong>100%</strong><span>Passion</span></div>
+<section class="section services" id="services">
+  <div class="section-head reveal">
+    <div>
+      <p class="kicker">Services &amp; Investment</p>
+      <h2>Collections</h2>
     </div>
+    <p class="head-note">Every collection includes a pre-shoot consultation, professional colour grading and a private online gallery.</p>
   </div>
-</section>
-
-<section class="section" id="services">
-  <div class="section-head">
-    <p class="eyebrow">Services</p>
-    <h2>Packages</h2>
-  </div>
-  <div class="cards">
-    <div class="card">
-      <h3>Portrait Session</h3>
-      <p class="price">From &#8358;50,000</p>
-      <ul>
-        <li>1 hour shoot</li>
-        <li>1 location</li>
-        <li>20 edited photos</li>
-        <li>Online gallery</li>
-      </ul>
-      <a href="#contact" class="btn btn-outline" data-package="Portrait Session">Book</a>
-    </div>
-    <div class="card featured">
-      <span class="badge">Most Popular</span>
-      <h3>Wedding Coverage</h3>
-      <p class="price">From &#8358;350,000</p>
-      <ul>
-        <li>Full day coverage</li>
-        <li>Second shooter</li>
-        <li>400+ edited photos</li>
-        <li>Pre-wedding shoot</li>
-      </ul>
-      <a href="#contact" class="btn" data-package="Wedding Coverage">Book</a>
-    </div>
-    <div class="card">
-      <h3>Events</h3>
-      <p class="price">From &#8358;120,000</p>
-      <ul>
-        <li>Up to 4 hours</li>
-        <li>Birthdays, launches, parties</li>
-        <li>100+ edited photos</li>
-        <li>48-hour sneak peek</li>
-      </ul>
-      <a href="#contact" class="btn btn-outline" data-package="Events">Book</a>
-    </div>
+  <div class="service-list">
+    <article class="service reveal">
+      <span class="s-num">01</span>
+      <div class="s-body">
+        <h3>Wedding Collection</h3>
+        <p>Full-day coverage from preparation to the last dance, a second photographer, engagement session and 400+ hand-edited images.</p>
+      </div>
+      <div class="s-price"><span>From</span>&#8358;850,000</div>
+      <a href="#contact" class="s-link" data-package="Wedding">Inquire &rarr;</a>
+    </article>
+    <article class="service reveal">
+      <span class="s-num">02</span>
+      <div class="s-body">
+        <h3>Portrait Session</h3>
+        <p>Individuals, couples, families or professional headshots. Up to two hours, two locations, styling guidance and 40 edited images.</p>
+      </div>
+      <div class="s-price"><span>From</span>&#8358;150,000</div>
+      <a href="#contact" class="s-link" data-package="Portrait">Inquire &rarr;</a>
+    </article>
+    <article class="service reveal">
+      <span class="s-num">03</span>
+      <div class="s-body">
+        <h3>Events &amp; Brands</h3>
+        <p>Corporate events, launches, birthdays and campaigns. Flexible hourly coverage with a 48-hour preview and full commercial usage rights.</p>
+      </div>
+      <div class="s-price"><span>From</span>&#8358;300,000</div>
+      <a href="#contact" class="s-link" data-package="Event">Inquire &rarr;</a>
+    </article>
   </div>
 </section>
 
-<section class="section contact" id="contact">
-  <div class="section-head">
-    <p class="eyebrow">Contact</p>
-    <h2>Let's create something beautiful</h2>
-    <p class="muted">Tell me about your shoot and I'll get back to you within 24 hours.</p>
+<section class="process">
+  <div class="section-head center reveal">
+    <p class="kicker light">The Experience</p>
+    <h2>How we'll work together</h2>
   </div>
-  <form class="form" id="contactForm">
-    <div class="row">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
+  <div class="steps">
+    <div class="step reveal"><span>01</span><h4>Inquire</h4><p>Share your date and vision. I'll reply within 24 hours.</p></div>
+    <div class="step reveal"><span>02</span><h4>Consult</h4><p>We meet to plan locations, timings and every detail.</p></div>
+    <div class="step reveal"><span>03</span><h4>Capture</h4><p>A relaxed session where I guide you gently and naturally.</p></div>
+    <div class="step reveal"><span>04</span><h4>Deliver</h4><p>Your finished gallery, carefully edited and ready to treasure.</p></div>
+  </div>
+</section>
+
+<section class="section testimonials" id="journal">
+  <p class="kicker center reveal">Kind Words</p>
+  <div class="quotes reveal" id="quotes">
+    <blockquote class="quote active">
+      <p>&ldquo;Praise made us feel completely at ease. Every time we open our gallery we relive the whole day &mdash; the photos are more beautiful than we ever imagined.&rdquo;</p>
+      <cite>Tolu &amp; David &mdash; Wedding, Lagos</cite>
+    </blockquote>
+    <blockquote class="quote">
+      <p>&ldquo;Professional from the first message to final delivery. Our launch photos were used across all our campaigns and still get compliments.&rdquo;</p>
+      <cite>Amaka O. &mdash; Brand Event</cite>
+    </blockquote>
+    <blockquote class="quote">
+      <p>&ldquo;I hate being in front of the camera, but Praise has a gift. These are the first portraits of myself I truly love.&rdquo;</p>
+      <cite>Kemi A. &mdash; Portrait Session</cite>
+    </blockquote>
+  </div>
+  <div class="dots" id="dots"><button class="active" aria-label="Testimonial 1"></button><button aria-label="Testimonial 2"></button><button aria-label="Testimonial 3"></button></div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="section-head reveal">
+    <div>
+      <p class="kicker">Questions</p>
+      <h2>Frequently asked</h2>
     </div>
-    <div class="row">
-      <select name="package" id="packageSelect">
-        <option>Portrait Session</option>
-        <option>Wedding Coverage</option>
-        <option>Events</option>
-        <option>Something else</option>
-      </select>
-      <input type="date" name="date">
-    </div>
-    <textarea name="message" rows="5" placeholder="Tell me about your shoot..." required></textarea>
-    <div class="form-actions">
-      <button type="submit" class="btn">Send via Email</button>
-      <button type="button" class="btn btn-outline" id="waBtn">Send via WhatsApp</button>
-    </div>
-  </form>
-  <div class="socials">
-    <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-    <a href="mailto:praiseadebayo684@gmail.com">praiseadebayo684@gmail.com</a>
+  </div>
+  <div class="faq-list">
+    <details class="reveal"><summary>How far in advance should we book?</summary><p>Weddings are usually booked 6&ndash;12 months ahead; portraits and events 2&ndash;4 weeks ahead. Reach out anyway &mdash; last-minute dates do open up.</p></details>
+    <details class="reveal"><summary>Do you travel for shoots?</summary><p>Yes. I'm based in Lagos and regularly photograph across Nigeria and internationally. Travel costs are quoted transparently up front.</p></details>
+    <details class="reveal"><summary>When will we receive our photos?</summary><p>You'll get a sneak peek within 48 hours. Full portrait galleries arrive within 2 weeks, and wedding galleries within 4&ndash;6 weeks.</p></details>
+    <details class="reveal"><summary>How do we secure our date?</summary><p>A signed agreement and a 50% retainer reserve your date. The balance is due one week before the shoot.</p></details>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-img" style="background-image:url('https://images.unsplash.com/photo-1529636798458-92182e662485?w=1400&q=80')"></div>
+  <div class="contact-body">
+    <p class="kicker">Inquire</p>
+    <h2>Let's tell your story.</h2>
+    <p class="muted">Tell me a little about your plans and I'll be in touch within 24 hours with availability and a tailored proposal.</p>
+    <form id="contactForm" class="form" novalidate>
+      <div class="field-row">
+        <label class="field"><span>Full name</span><input name="name" type="text" required autocomplete="name"></label>
+        <label class="field"><span>Email</span><input name="email" type="email" required autocomplete="email"></label>
+      </div>
+      <div class="field-row">
+        <label class="field"><span>Service</span>
+          <select name="package" id="packageSelect">
+            <option>Wedding</option><option>Portrait</option><option>Event</option><option>Other</option>
+          </select>
+        </label>
+        <label class="field"><span>Date</span><input name="date" type="date"></label>
+      </div>
+      <label class="field"><span>Tell me about it</span><textarea name="message" rows="4" required></textarea></label>
+      <div class="form-foot">
+        <button type="submit" class="btn">Send inquiry</button>
+        <button type="button" class="btn btn-ghost" id="waBtn">WhatsApp</button>
+      </div>
+      <p class="form-status" id="formStatus" role="status"></p>
+    </form>
   </div>
 </section>
 
 <footer class="footer">
-  <p>&copy; <span id="year"></span> Praise Adebayo Photography. All rights reserved.</p>
+  <div class="footer-top">
+    <a href="#top" class="brand dark"><span class="brand-name">Praise Adebayo</span><span class="brand-sub">Photography</span></a>
+    <div class="footer-cols">
+      <div><h5>Contact</h5><a href="mailto:praiseadebayo684@gmail.com">praiseadebayo684@gmail.com</a><span>Lagos, Nigeria</span></div>
+      <div><h5>Follow</h5><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a><a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a></div>
+      <div><h5>Explore</h5><a href="#work">Portfolio</a><a href="#services">Collections</a><a href="#faq">FAQ</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>&copy; <span id="year"></span> Praise Adebayo Photography</span><a href="#top">Back to top &uarr;</a></div>
 </footer>
 
 <div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
-  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">&#8249;</button>
-  <img id="lbImg" alt="">
-  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">&#8250;</button>
+  <button class="lb-close" id="lbClose" aria-label="Close">Close &times;</button>
+  <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous">&larr;</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lb-arrow lb-next" id="lbNext" aria-label="Next">&rarr;</button>
 </div>
 
 <script src="script.js"></script>

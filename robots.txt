@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dapo2545.github.io/dpphotos/sitemap.xml
